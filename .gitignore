@@ -21,6 +21,9 @@
 # vim temp file
 *.swp
 
+# OSX temp file
+.DS_Store
+
 # GIT ignore by GITHUB for Rails
 *.rbc
 capybara-*.html

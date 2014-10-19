@@ -38,3 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Doorkeeper
+gem 'doorkeeper', '1.4.0'
