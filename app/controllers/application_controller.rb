@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   skip_before_action :verify_authenticity_token, if: :json_request?
 
-  respond_to :json
+  respond_to :json, :html
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
