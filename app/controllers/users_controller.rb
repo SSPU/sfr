@@ -1,14 +1,9 @@
 class UsersController < ApplicationController
-  respond_to    :json
+
+  before_action :current_user
 
   def show
-    respond_with current_user
-  end
-
-  private
-
-  def current_user
-    User.find(doorkeeper_token.resource_owner_id) if doorkeeper_token
+    render json: {user: @current_user}, status: :ok
   end
 
 end
