@@ -2,7 +2,7 @@ class CreateTokens < ActiveRecord::Migration
   def change
     create_table :tokens do |t|
       t.belongs_to :user
-      t.text       :token
+      t.string     :token
       t.datetime   :expire
 
       t.timestamps
