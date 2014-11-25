@@ -1,0 +1,5 @@
+<h1>New picture</h1>
+
+<%= render partial: 'form', :locals => {url: {controller: 'admin/pictures', action: 'create', method: 'post'}}  %>
+
+<%= link_to 'Back', admin_product_pictures_path(@product) %>

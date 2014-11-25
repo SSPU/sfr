@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030143337) do
+ActiveRecord::Schema.define(version: 20141121163853) do
+
+  create_table "pictures", force: true do |t|
+    t.integer  "product_id"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "order"
+    t.boolean  "cover",             default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "sn"
+    t.string   "name"
+    t.text     "des"
+    t.boolean  "active",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tokens", force: true do |t|
     t.integer  "user_id"

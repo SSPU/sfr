@@ -1,0 +1,6 @@
+<h1>Editing picture</h1>
+
+<%= render partial: 'form', :locals => {url: {controller: 'admin/pictures', action: 'update', method: 'put'}}  %>
+
+<%= link_to 'Show', admin_product_picture_path(@product, @picture) %> |
+<%= link_to 'Back', admin_product_pictures_path(@product) %>

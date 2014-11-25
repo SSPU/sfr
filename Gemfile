@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 # MySQL
 gem 'mysql2', group: :production
+
+# PaperClip - Image Upload & Processing
+gem 'paperclip', '~> 4.2'
