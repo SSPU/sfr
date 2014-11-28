@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string  :sn
       t.string  :name
+      t.integer :cat
       t.text    :des
       t.boolean :active, default: false
 

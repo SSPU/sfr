@@ -17,6 +17,10 @@
     <%= f.text_field :sn %>
   </div>
   <div class="field">
+    <%= f.label :Category %><br>
+    <%= f.select :cat, Product::CAT_OPTS %>
+  </div>
+  <div class="field">
     <%= f.label :Active %><br>
     <%= f.check_box :active %>
   </div>

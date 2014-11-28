@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141121163853) do
   create_table "products", force: true do |t|
     t.string   "sn"
     t.string   "name"
+    t.integer  "cat"
     t.text     "des"
     t.boolean  "active",     default: false
     t.datetime "created_at"

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
 
+  get 'suitfabrics'   => 'products#suit_fabrics',   as: :suitfabrics
+  get 'shirtfabrics'  => 'products#shirt_fabrics',  as: :shirtfabrics
+  get 'liningfabrics' => 'products#lining_fabrics', as: :liningfabrics
+
   namespace :admin do
     resources :products do
       resources :pictures
