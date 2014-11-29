@@ -34,8 +34,8 @@ class ApplicationController < ActionController::Base
 
   def current_admin
     @current_admin = nil
-    if session[:admin]
-      @current_admin = session[:admin]
+    if session[:admin_id]
+      @current_admin = Admin.find session[:admin_id]
     else
       redirect_to admin_login_path, notice: 'Require admin login'
     end
