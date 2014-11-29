@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121163853) do
+ActiveRecord::Schema.define(version: 20141128172157) do
+
+  create_table "admins", force: true do |t|
+    t.string   "name"
+    t.text     "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admins", ["name"], name: "index_admins_on_name", unique: true
 
   create_table "pictures", force: true do |t|
     t.integer  "product_id"

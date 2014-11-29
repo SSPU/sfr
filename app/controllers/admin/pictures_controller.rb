@@ -1,4 +1,5 @@
 class Admin::PicturesController < ApplicationController
+  before_action :current_admin
   before_action :set_product, only: [:show, :edit, :update, :destroy, :index, :create, :new]
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
 

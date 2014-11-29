@@ -32,6 +32,15 @@ class ApplicationController < ActionController::Base
     @current_user = u
   end
 
+  def current_admin
+    @current_admin = nil
+    if session[:admin]
+      @current_admin = session[:admin]
+    else
+      redirect_to admin_login_path, notice: 'Require admin login'
+    end
+  end
+
   protected
 
   def json_request?

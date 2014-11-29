@@ -1,0 +1,19 @@
+<h1>SuitFabrik Admin Login</h1>
+
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@admin, url:{controller: 'admin/session', action: 'auth', method: 'post'}) do |f|  %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'login'  %>
+  </div>
+
+<% end %>

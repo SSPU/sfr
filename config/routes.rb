@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
 
-  get 'suitfabrics'   => 'products#suit_fabrics',   as: :suitfabrics
-  get 'shirtfabrics'  => 'products#shirt_fabrics',  as: :shirtfabrics
+  get 'suitfabrics'   => 'products#suit_fabrics'  , as: :suitfabrics
+  get 'shirtfabrics'  => 'products#shirt_fabrics' , as: :shirtfabrics
   get 'liningfabrics' => 'products#lining_fabrics', as: :liningfabrics
 
   namespace :admin do
@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
   post 'signup' => 'session#signup', as: :signup
   post 'signin' => 'session#signin', as: :signin
+
+  get  'admin/login'  => 'admin/session#login', as: :admin_login
+  post 'admin/auth'   => 'admin/session#auth' , as: :admin_auth
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
