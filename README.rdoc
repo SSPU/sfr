@@ -9,6 +9,8 @@ imagemagick
 
 * Deploy commands
 
+bin/delayed_job stop
+
 git pull origin master
 
 bundle install
@@ -20,3 +22,6 @@ rake assets:precompile
 rake paperclip:refresh:missing_styles
 
 sudo service nginx restart | stop - start
+
+rails generate delayed_job
+bin/delayed_job start

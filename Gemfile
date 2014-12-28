@@ -43,3 +43,7 @@ gem 'mysql2', group: :production
 
 # PaperClip - Image Upload & Processing
 gem 'paperclip', '~> 4.2'
+
+# Delay Job
+gem 'daemons'
+gem 'delayed_job_active_record'

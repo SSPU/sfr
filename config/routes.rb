@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get  'admin/login'  => 'admin/session#login', as: :admin_login
   post 'admin/auth'   => 'admin/session#auth' , as: :admin_auth
 
+  post 'notification/send_message' => 'notification#send_message'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
