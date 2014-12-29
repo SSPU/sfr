@@ -6,7 +6,7 @@ class NotificationController < ApplicationController
       NotificationMailer.delay.message_email(@message)
       render json: {message: 'success'}, status: :ok
     else
-      render json: {message: 'unsuccess'}, status: :unprocessable_entity
+      render json: {message: 'failed'}, status: :unprocessable_entity
     end
   end
 
