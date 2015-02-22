@@ -47,3 +47,6 @@ gem 'paperclip', '~> 4.2'
 # Delay Job
 gem 'daemons'
 gem 'delayed_job_active_record'
+
+# Rack-CORS
+gem 'rack-cors', :require => 'rack/cors'
